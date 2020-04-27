@@ -1,8 +1,8 @@
 import React from 'react';
 import {View} from 'react-native';
 
-const App: React.FC = () => {
+export const Main: React.FC = () => {
   return <View />;
 };
 
-export default App;
+export default Main;

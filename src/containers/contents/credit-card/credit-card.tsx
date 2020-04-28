@@ -1,32 +1,50 @@
 import React from 'react';
+import {Text} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
+import {TransactionFooter} from '~/components';
 import {
   Container,
+  Box,
+  Bar,
+  Detail,
   Header,
+  HeaderTitle,
   Content,
-  Footer,
   Title,
   Subtitle,
-  Description,
+  Amount,
 } from './styles';
 
 export const CreditCard: React.FC = () => {
   return (
     <Container>
-      <Header>
-        <Icon name="attach-money" size={28} color="#666" />
-        <Icon name="visibility-off" size={28} color="#666" />
-      </Header>
-      <Content>
-        <Title>Saldo disponível</Title>
-        <Subtitle>R$ 197.611,65</Subtitle>
-      </Content>
-      <Footer>
-        <Description>
-          Transferência de R$ 200,00 recebida de Diego Peres hoje às 06:00h
-        </Description>
-      </Footer>
+      <Box>
+        <Detail>
+          <Header>
+            <Icon name="credit-card" size={28} color="#999" />
+            <HeaderTitle>Cartão de crédito</HeaderTitle>
+          </Header>
+          <Content>
+            <Title>Fatura Atual</Title>
+            <Amount>R$ 347,16</Amount>
+            <Subtitle>
+              Limite disponível{' '}
+              <Text
+                style={{
+                  fontFamily: 'AcherusGrotesque-Regular',
+                  color: '#94C42C',
+                }}>
+                R$ 115,95
+              </Text>
+            </Subtitle>
+          </Content>
+        </Detail>
+        <Bar />
+      </Box>
+      <TransactionFooter icon="shopping-cart">
+        Compra mais recente em Giassi Supermecado no valor de R$ 39,41 domingo
+      </TransactionFooter>
     </Container>
   );
 };

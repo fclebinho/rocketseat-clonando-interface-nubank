@@ -7,16 +7,36 @@ export const Container = styled.View`
   height: 100%;
 `;
 
+export const Box = styled.View`
+  flex: 1;
+  flex-direction: row;
+  padding: 25px;
+`;
+
+export const Detail = styled.View`
+  flex: 1;
+`;
+
+export const Bar = styled.View`
+  width: 10px;
+  background: #ffaa24;
+  border-radius: 25px;
+`;
+
 export const Header = styled.View`
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  padding: 30px;
+`;
+
+export const HeaderTitle = styled.Text`
+  font-family: 'AcherusGrotesque-Regular';
+  font-size: 17px;
+  margin-left: 13px;
+  color: #7a7a7a;
 `;
 
 export const Content = styled.View`
   flex: 1;
-  padding: 0 30px;
   justify-content: center;
 `;
 
@@ -27,17 +47,29 @@ export const Footer = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: 13px;
-  color: #999;
+  font-family: 'AcherusGrotesque-Regular';
+  font-size: 16px;
+  color: #06bcca;
+  text-transform: uppercase;
+`;
+
+export const Amount = styled.Text`
+  font-family: 'AcherusGrotesque-Regular';
+  font-size: 36px;
+  margin-top: 3px;
+  color: #06bcca;
+  text-transform: uppercase;
 `;
 
 export const Subtitle = styled.Text`
-  font-size: 32px;
+  font-family: 'AcherusGrotesque-Regular';
+  font-size: 16px;
   margin-top: 3px;
   color: #333;
 `;
 
 export const Description = styled.Text`
-  font-size: 12px;
+  font-family: 'AcherusGrotesque-Regular';
+  font-size: 14px;
   color: #333;
 `;

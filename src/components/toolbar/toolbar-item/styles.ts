@@ -11,6 +11,7 @@ export const Container = styled.View`
 `;
 
 export const Description = styled.Text`
+  font-family: 'AcherusGrotesque-Regular';
   font-size: 13px;
   color: #fff;
 `;

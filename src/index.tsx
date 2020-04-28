@@ -6,7 +6,7 @@ import {Routes} from '~/routes';
 const App: React.FC = () => {
   return (
     <>
-      <StatusBar />
+      <StatusBar barStyle="light-content" backgroundColor="#8b10ae" />
       <Routes />
     </>
   );

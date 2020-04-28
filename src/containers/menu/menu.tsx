@@ -1,4 +1,5 @@
 import React from 'react';
+import {Animated} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import QRCode from 'react-native-qrcode-svg';
 
@@ -12,9 +13,20 @@ import {
   SignOutText,
 } from './styles';
 
-export const Menu: React.FC = () => {
+export interface MenuProps {
+  translateY: Animated.Value;
+}
+
+export const Menu: React.FC<MenuProps> = ({translateY}) => {
   return (
-    <Container>
+    <Container
+      style={{
+        opacity: translateY.interpolate({
+          inputRange: [0, 150],
+          outputRange: [0, 1],
+        }),
+      }}
+    >
       <BarCode>
         <QRCode
           value="http://plussoftware.com.br"

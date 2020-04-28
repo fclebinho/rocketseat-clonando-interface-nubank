@@ -1,3 +1,4 @@
+import {Animated} from 'react-native';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
@@ -6,7 +7,7 @@ export const Container = styled.View`
   z-index: 5;
 `;
 
-export const Content = styled.View`
+export const Content = styled(Animated.View)`
   flex: 1;
   height: 100%;
   position: absolute;
